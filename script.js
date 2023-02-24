@@ -35,7 +35,7 @@ let Question = 0;
 let point = 0;
 
 const questionEl = document.getElementById("question");
-const pointEl = document.getElementById("point");
+const pointElement = document.getElementById("point");
 const btn0 = document.getElementById("button0");
 const btn1 = document.getElementById("button1");
 const btn2 = document.getElementById("button2");
@@ -53,14 +53,14 @@ function loadQuestion() {
 function checkAnswer(answer) {
   if (answer === questions[Question].answer) {
     point++;
-    pointEl.innerHTML = `Score: ${point}`;
+    pointElement.innerHTML = `Score: ${point}`;
   }
   Question++;
   if (Question >= questions.length) {
     let finalpoint = getElementById("point");
     Question = 0;
     point = 0;
-    pointEl.innerHTML = `Score: ${point}`;
+    pointElement.innerHTML = `Score: ${point}`;
   }
   loadQuestion();
 }
